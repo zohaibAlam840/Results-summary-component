@@ -1,0 +1,187 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+
+}
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    display: flex;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    width: 20vw;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    background: linear-gradient( to bottom , hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+.result > *{
+    margin-bottom: 8%;
+}
+.result .circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    background: linear-gradient( to bottom ,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+}
+.circle h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.text{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.summary{
+    display: flex;
+    position: relative;
+    left: -25px;
+    bottom: 2px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    width: 23vw;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-left: 20px;
+    box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.151);
+    z-index: 1;
+}
+.summary h2{
+    position: relative;
+    left: -70px;
+    top: -20px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.summary > div{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 15vw;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.summary > div > p > span {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 60px;
+}
+.summary > div > p > span > span{
+    color: rgba(0, 0, 0, 0.418);
+}
+.summary .reaction{
+    background-color:hsla(0, 100%, 67%, 0.101) ;
+    color: hsl(0, 100%, 67%);
+}
+.summary .memory{
+    background-color:hsla(39, 100%, 56%, 0.101) ;
+    color: hsl(39, 100%, 56%);
+}
+.summary .varbal{
+    background-color:hsla(166, 100%, 37%, 0.101) ;
+    color: hsl(166, 100%, 37%);
+}
+.summary .visual{
+    background-color:hsla(234, 85%, 45%, 0.101) ;
+    color: hsl(234, 85%, 45%);
+}
+.summary button{
+    height: 40px;
+    width: 15vw;
+    background-color: rgb(48, 48, 98);
+    color: white;
+    border: none;
+    border-radius: 40px;
+}
+.summary button:active{
+    background: linear-gradient( to bottom , hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+
+@media (max-width: 375px) {
+    .container{
+        flex-direction: column;
+    }   
+    p{
+        font-size: 14px;
+    } 
+    h1{
+        font-size: 1.5rem;
+    }
+    .result{
+        width: 375px;
+        height: 45vh;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        padding-top: 15px;
+    }
+    .result > *{
+        margin-bottom: 4%;
+    }
+    .result .circle h1{
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    .result .circle p{
+        color: rgba(255, 255, 255, 0.677);
+    }
+    .text{
+        padding-left: 75px;
+        padding-right: 75px;
+        color: rgba(255, 255, 255, 0.677);
+    }
+    .result .circle{
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+    }
+    .summary{
+        width: 375px;
+        height: 55vh;
+        top: 35px;
+        left: 5px;
+        justify-content: start;
+    }
+    .summary > div{
+        position: relative;
+        left: 0px;
+        height: 40px;
+        width: 80vw;
+
+    }
+    .summary h2{
+        left: -110px;
+        font-size: 1rem;
+        font-weight: bolder;
+        
+    }
+    .summary button{
+        width: 80vw;
+        height: 50px;
+    }
+    .summary > div > p > span {
+        right: 20px;
+    }
+
+}
